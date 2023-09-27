@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Serif, serif;
+    font-style: italic;
+}
+:root {
+    --bg-color: #2b1165;
+    --fg-color: rgb(245, 65, 113);
+    --bg-grad: linear-gradient(180deg, var(--bg-color) 0%, rgba(26, 58, 130, 1) 37%, rgba(171, 36, 177, 1) 69%, var(--fg-color) 100%);
+    --fg-grad: linear-gradient(0deg, var(--bg-color) 0%, rgba(26, 58, 130, 1) 37%, rgba(171, 36, 177, 1) 69%, var(--fg-color) 100%);
+}
+
+body{
+    width: 100vw;
+    background: rgb(43,17,101);
+    background: linear-gradient(180deg, rgba(43,17,101,1) 0%, rgba(26,58,130,1) 37%, rgba(171,36,177,1) 69%, rgba(245,65,113,1) 100%);
+    background-repeat: no-repeat;
+}
+table .header{
+    width: 150%;
+    background-color: blueviolet;
+}
+.box-error{
+    filter: invert(100%) hue-rotate(18deg) brightness(1.7);
+}
+.text-error{
+    background-color: tomato;
+    border: 6px solid red;
+}
+table {
+    width: 100%;
+}
+tbody{
+    width: 100%;
+}
+thead{
+    width: 100%;
+}
+tr{
+    width:100%
+}
+.x-input{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 30%;
+}
+.x-labels{
+    color: darkblue;
+}
+.y\/r-input{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 25%;
+}
+
+td > h1, td > label{
+    color: aquamarine;
+    text-align: center;
+    text-shadow: 1px 1px #ff80ff;
+}
+.x-input h2{
+    color: aquamarine;
+    text-shadow: 2px 2px #0000b3;
+}
+td > .y-textinput, td > .r-textinput{
+    width: 220px;
+    background-color: cyan;
+    height: 35px;
+    box-shadow: 3px 2px #ff80ff;
+}
+td > .y-textinput:hover, td > .r-textinput:hover{
+    box-shadow: 2px 1px #0000b3;
+}
+td > .x-checkbox{
+    text-align: center;
+    transform: scale(1.5);
+    cursor: pointer;
+    box-shadow: 1px 1px #66b3ff;
+    background-color: hotpink;
+}
+td > .x-checkbox:hover{
+    box-shadow: 0.5px 0.5px #ff80ff;
+}
+.mainHeaderText h1:hover{
+    text-shadow: none;
+    color: #c8b5e9;
+}
+td > .x-labels{
+    text-align: center;
+    text-shadow: 2px 2px 4px #fa2a55;
+}
+.mainHeaderText h1{
+    font-size: 60px;
+    margin-left: 1%;
+    opacity: 80%;
+    letter-spacing: 8px;
+    font-family: serif;
+    text-align: center;
+    color: rgba(5, 205, 221, 0.95);
+    text-shadow: 2px 2px 4px black;
+}
+td#rightHeaderPart{
+    font-family: serif;
+    color: rgb(231, 194, 195);
+
+}
+#rightHeaderPart:hover{
+    animation-name: spin, depth;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 2.5s;
+    cursor: vertical-text;
+}
+#resultTable {
+    margin-top: 20px;
+    border: 2px solid rgb(0, 0, 139);
+    background-color: #ffffff;
+    color: darkblue;
+    cursor: cell;
+}
+#resultTable td{
+    font-size: 25px;
+    text-align: center;
+}
+#resultTable tr:nth-child(2n-1) {
+    background-color: black;
+    color: #66b3ff;
+    text-shadow: 1px 1px #ff80ff;
+}
+
+#resultTable tr:nth-child(2n):hover {
+    background-color: lightpink;
+    color: #2b1165;
+    text-shadow: 1px 1px #66b3ff;
+}
+
+#resultTable tr:nth-child(2n-1):hover {
+    background-color: #ff80ff;
+    color: #fa2a55;
+}
+
+#resultTable tr.tableHeader:hover {
+    background-color: #0000b3;
+}
+.tableHeader{
+    color: hotpink;
+    background-color: cornflowerblue;
+    border: 2px solid darkblue;
+    background-position: center;
+    background-size: 100% auto;
+}
+#taskImage td{
+    text-align: center;
+}
+footer{
+    background-image: url("/vaporfloor.svg");
+    background-repeat: no-repeat;
+    width: 99%;
+}
+footer #links{
+    display: none;
+}
+footer:hover #links{
+    display: grid;
+}
+#taskImage td img{
+    margin-top: 30px;
+    width: 350px;
+    height: auto;
+    border: 5px solid #fa2a55;
+    border-radius: 5px;
+    cursor: crosshair;
+    box-shadow: 10px 10px #2b1165;
+}
+#taskImage img:hover{
+    border: 7px solid #2623ff;
+    box-shadow: 5px 5px #0000b3;
+}
+#submit-button{
+    margin-top: 10px;
+    height: 3rem;
+    width: 10rem;
+    font-family: Serif, serif;
+    font-style: italic;
+    background-color: #41c9ff;
+    color: #fa2a55;
+    cursor: pointer;
+    box-shadow: 3px 3px #0000b3;
+}
+#submit-button:hover{
+    background-color: #2623ff;
+    box-shadow: none;
+}
+@keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+@keyframes depth {
+    0% { text-shadow: 0 0 #fa2a55; }
+    25% { text-shadow: 2px 0 #fa2a55, 4px 0 #fa2a55, 6px 0 #fa2a55, 8px 0 #fa2a55, 10px 0 #fa2a55; }
+    50% { text-shadow: 0 0 #fa2a55; }
+    75% {text-shadow: -2px 0 #fa2a55, -4px 0 #fa2a55, -6px 0 #fa2a55, -8px 0 #fa2a55, -10px 0 #fa2a55; }
+    100% { text-shadow: 0 0 #fa2a55 }
+}
+.overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10vw;
+    height: 10vh;
+    background-color: transparent;
+    background-size: 5px 5px, 5px 5px;
+    background-position:  -1px -1px, -1px -1px;
+    background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    mix-blend-mode: difference;
+}
+
+.glitch:hover {
+    clip-path: polygon(0 0, 100% 0, 100% .5em, 0 .5em);
+    animation: glitch 10s linear infinite;
+    transform: translatex(.1rem);
+}
+
+@keyframes glitch {
+    to {
+        clip-path: polygon(0 calc(100% - .5em), 100% calc(100% - .5em), 0 100%, 0 100%)
+    }
+}
+
+.sun {
+    width: 140px;
+    height: 140px;
+    font-size: 1rem;
+
+    border-radius: 12vh;
+
+    position: relative;
+    overflow: hidden;
+}
+.sun::before {
+     padding-left: 6px;
+     padding-right: 6px;
+     content: "";
+     display: block;
+     position: absolute;
+     top: 0;
+     height: 50%;
+     background-color: var(--fg-color);
+     background: var(--fg-grad);
+     background-size: 18vh 18vh;
+     width: 100%;
+ }
+.sun::after {
+     content: "";
+
+     display: block;
+     position: absolute;
+     bottom: 0;
+
+     width: 100%;
+     height: 50%;
+     background-color: var(--fg-color);
+     background: var(--fg-grad);
+     background-size: 18vh 18vh;
+     background-position: bottom center;
+     clip-path: polygon(
+             0 -10em, 100% -10em, 100% -10.5em, 0 -10.5em,
+             0 -9em, 100% -9em, 100% -9.5em, 0 -9.5em,
+             0 -8em, 100% -8em, 100% -8.5em, 0 -8.5em,
+             0 -7em, 100% -7em, 100% -7.5em, 0 -7.5em,
+             0 -6em, 100% -6em, 100% -6.5em, 0 -6.5em,
+             0 -5em, 100% -5em, 100% -5.5em, 0 -5.5em,
+             0 -4em, 100% -4em, 100% -4.5em, 0 -4.5em,
+             0 -3em, 100% -3em, 100% -3.5em, 0 -3.5em,
+             0 -2em, 100% -2em, 100% -2.5em, 0 -2.5em,
+             0 -1em, 100% -1em, 100% -1.5em, 0 -1.5em,
+             0 0, 100% 0, 100% -.5em, 0 -.5em,
+             0 0, 100% 0, 100% .5em, 0 .5em,
+             0 1em, 100% 1em, 100% 1.5em, 0 1.5em,
+             0 2em, 100% 2em, 100% 2.5em, 0 2.5em,
+             0 3em, 100% 3em, 100% 3.5em, 0 3.5em,
+             0 4em, 100% 4em, 100% 4.5em, 0 4.5em,
+             0 5em, 100% 5em, 100% 5.5em, 0 5.5em,
+             0 6em, 100% 6em, 100% 6.5em, 0 6.5em,
+             0 7em, 100% 7em, 100% 7.5em, 0 7.5em,
+             0 8em, 100% 8em, 100% 8.5em, 0 8.5em,
+             0 9em, 100% 9em, 100% 9.5em, 0 9.5em);
+     animation: lightEffect 20s linear infinite reverse;
+ }
+
+@keyframes lightEffect {
+    to {
+        clip-path: polygon(
+                0 0, 100% 0, 100% .5em, 0 .5em,
+                0 1em, 100% 1em, 100% 1.5em, 0 1.5em,
+                0 2em, 100% 2em, 100% 2.5em, 0 2.5em,
+                0 3em, 100% 3em, 100% 3.5em, 0 3.5em,
+                0 4em, 100% 4em, 100% 4.5em, 0 4.5em,
+                0 5em, 100% 5em, 100% 5.5em, 0 5.5em,
+                0 6em, 100% 6em, 100% 6.5em, 0 6.5em,
+                0 7em, 100% 7em, 100% 7.5em, 0 7.5em,
+                0 8em, 100% 8em, 100% 8.5em, 0 8.5em,
+                0 9em, 100% 9em, 100% 9.5em, 0 9.5em,
+                0 10em, 100% 10em, 100% 10em, 0 10em,
+                0 11em, 100% 11em, 100% 11.5em, 0 11.5em,
+                0 12em, 100% 12em, 100% 12.5em, 0 12.5em,
+                0 13em, 100% 13em, 100% 13.5em, 0 13.5em,
+                0 14em, 100% 14em, 100% 14.5em, 0 14.5em,
+                0 15em, 100% 15em, 100% 15.5em, 0 15.5em,
+                0 16em, 100% 16em, 100% 16.5em, 0 16.5em,
+                0 17em, 100% 17em, 100% 17.5em, 0 17.5em,
+                0 18em, 100% 18em, 100% 18.5em, 0 18.5em,
+                0 19em, 100% 19em, 100% 19.5em, 0 19.5em,
+                0 20em, 100% 20em, 100% 20.5em, 0 20.5em
+        );
+    }
+}

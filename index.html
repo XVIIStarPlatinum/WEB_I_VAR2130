@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XVIIstarPt_LAB1</title>
+    <meta title = "description" content = "">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    <link rel = "stylesheet" href="3,14SS.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <map name="task">
+        <area alt="vaporwave" title="link" href="https://www.youtube.com/watch?v=oF9yHO-UUws" coords="745,223,1172,651" shape="rect">
+    </map>
+    <table>
+        <tr class="header">
+            <td class="sun"></td>
+            <td class="mainHeaderText">
+                <h1>Лабораторная работа №1</h1>
+            </td>
+            <td id="rightHeaderPart">
+                <h2>.P3211{<br>&emsp;stud-name: "Болорболд Аригуун"<br>&emsp;lab-variant: "№2130"<br>}</h2>
+            </td>
+        </tr>
+        <tr id="taskImage">
+            <td colspan=100% ><img src="./Task.svg" alt="Task Grid" usemap="#task"></td>
+        </tr>
+        <tr>
+            <td class="text" colspan=100%>
+                <h1>Введите данные:</h1>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <form action="" id="inputForm" method="post">
+        <table class="x-input">
+            <tr>
+                <td colspan=100%><h2>X:</h2></td>
+            </tr>
+            <tr class="x-checkboxes">
+                <td>
+                    <input class="x-checkbox" type="checkbox" name="xval" id="x-checkbox0" value="-2">
+                </td>
+                <td>
+                    <input class="x-checkbox" type="checkbox" name="xval" id="x-checkbox1" value="-1.5">
+                </td>
+                <td>
+                    <input class="x-checkbox" type="checkbox" name="xval" id="x-checkbox2" value="-1">
+                </td>
+                <td>
+                    <input class="x-checkbox" type="checkbox" name="xval" id="x-checkbox3" value="-0.5">
+                </td>
+                <td>
+                    <input class="x-checkbox" type="checkbox" name="xval" id="x-checkbox4" value="0">
+                </td>
+                <td>
+                    <input class="x-checkbox" type="checkbox" name="xval" id="x-checkbox5" value="0.5">
+                </td>
+                <td>
+                    <input class="x-checkbox" type="checkbox" name="xval" id="x-checkbox6" value="1">
+                </td>
+                <td>
+                    <input class="x-checkbox" type="checkbox" name="xval" id="x-checkbox7" value="1.5">
+                </td>
+                <td>
+                    <input class="x-checkbox" type="checkbox" name="xval" id="x-checkbox8" value="2">
+                </td>
+            </tr>
+            <tr class="x-labels">
+                <td>
+                    <label class="xbox-label" for="x-checkbox0"> <h3>-2</h3> </label>
+                </td>
+                <td>
+                    <label class="xbox-label" for="x-checkbox1"> <h3>-1.5</h3> </label>
+                </td>
+                <td>
+                    <label class="xbox-label" for="x-checkbox2"> <h3>-1</h3> </label>
+                </td>
+                <td>
+                    <label class="xbox-label" for="x-checkbox3"> <h3>-0.5</h3> </label>
+                </td>
+                <td>
+                    <label class="xbox-label" for="x-checkbox4"> <h3>0</h3> </label>
+                </td>
+                <td>
+                    <label class="xbox-label" for="x-checkbox5"> <h3>0.5</h3> </label>
+                </td>
+                <td>
+                    <label class="xbox-label" for="x-checkbox6"> <h3>1</h3> </label>
+                </td>
+                <td>
+                    <label class="xbox-label" for="x-checkbox7"> <h3>1.5</h3> </label>
+                </td>
+                <td>
+                    <label class="xbox-label" for="x-checkbox8"> <h3>2</h3> </label>
+                </td>
+            </tr>
+
+        </table>
+        <table class="y/r-input">
+            <tr id="inputY">
+                <td><label class="ylabel" for="y-value"><h2>Y:</h2></label></td>
+                <td><input class="y-textinput" type="number" id="y-value" name="yval" autocomplete="off" maxlength="10"
+                           placeholder="Введите число в интервале [-3; 3]"></td>
+                <td><label class="rlabel" for="r-value"><h2>R:</h2></label></td>
+                <td><input class="r-textinput" type="number" id="r-value" name="rval" autocomplete="off" maxlength="10"
+                           placeholder="Введите число в интервале [2; 5]"></td>
+            </tr>
+            <tr>
+                <td colspan="100%">
+                    <button id="submit-button"><h1>Submit.</h1></button>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+
+    <table id="resultTable">
+        <tr class="tableHeader">
+            <th><h2>X</h2></th>
+            <th><h2>Y</h2></th>
+            <th><h2>R</h2></th>
+            <th><h2>Локальное время</h2></th>
+            <th><h2>Время исполнения</h2></th>
+            <th><h2>Попадание</h2></th>
+        </tr>
+    </table>
+    <footer>
+        <table>
+            <tr>
+                <td>
+                    <h1>
+                        XVIIstarPt_ | MMXXIII
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td id="links">
+                    <h1>
+                        GitHub: <link href="https://github.com/XVIIStarPlatinum">
+                    </h1>
+                </td>
+                <td>
+                    <h1>
+
+                    </h1>
+                </td>
+            </tr>
+        </table>
+    </footer>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="JSWave.js"></script>
+
+</body>
+</html>
