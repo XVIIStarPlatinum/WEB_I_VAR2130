@@ -46,6 +46,7 @@ $(function () {
             return false;
         }
     }
+
     function validateForm(){
         console.log("Validating...");
         return validateR() && validateX() && validateY();
@@ -55,6 +56,14 @@ $(function () {
             $(this).prop('checked', true);
             $(".x-checkbox").not(this).prop('checked', false);
         });
+
+    $('#inputForm').on('reset', function (event){
+       event.preventDefault();
+       localStorage.clear();
+       const rows = document.querySelectorAll(".resultRow");
+       $("#resultTable tbody tr").remove();
+    });
+
     $('#inputForm').on('submit', function(event) {
         event.preventDefault();
         let timeZoneOffset = new Date().getTimezoneOffset();
@@ -86,9 +95,10 @@ $(function () {
                     newRow += '<td>' + data.cTime + '</td>';
                     newRow += '<td>' + data.exTime + '</td>';
                     newRow += '<td>' + data.hitRes + '</td>';
-                    $('#resultTable').append(newRow);
+                    const table = $('#resultTable tbody').append(newRow);
+                    table.find('td').addClass("resultRow");
                     let key = localStorage.length+1;
-                    localStorage.setItem(key.toString(),newRow);
+                    localStorage.setItem(key.toString(), newRow);
                 }
             }
         });

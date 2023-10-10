@@ -13,14 +13,16 @@
 }
 
 body{
-    width: 100vw;
+    width: auto;
     background: rgb(43,17,101);
-    background: linear-gradient(180deg, rgba(43,17,101,1) 0%, rgba(26,58,130,1) 37%, rgba(171,36,177,1) 69%, rgba(245,65,113,1) 100%);
+    background: url("Vaporwave_BG.png");
+    background-size: 1920px;
     background-repeat: no-repeat;
 }
-table .header{
-    width: 150%;
-    background-color: blueviolet;
+table .header {
+    width: 100%;
+    background: var(--fg-grad);
+    border: var(--fg-grad);
 }
 .box-error{
     filter: invert(100%) hue-rotate(18deg) brightness(1.7);
@@ -50,26 +52,31 @@ tr{
 .x-labels{
     color: darkblue;
 }
-.y\/r-input{
+.y\/r-input, .buttons{
     margin-left: auto;
     margin-right: auto;
+    width: 40%;
     text-align: center;
-    width: 25%;
+}
+
+.y-textinput, .r-textinput{
+    font-size: 30px;
 }
 
 td > h1, td > label{
-    color: aquamarine;
+    color: #fa2a55;
     text-align: center;
-    text-shadow: 1px 1px #ff80ff;
+    text-shadow: 1px 1px #0000b3;
 }
 .x-input h2{
-    color: aquamarine;
-    text-shadow: 2px 2px #0000b3;
+    color: #fa2a55;
+    text-shadow: 1px 1px #0000b3;
 }
 td > .y-textinput, td > .r-textinput{
-    width: 220px;
+    width: 225px;
     background-color: cyan;
     height: 35px;
+    text-align: center;
     box-shadow: 3px 2px #ff80ff;
 }
 td > .y-textinput:hover, td > .r-textinput:hover{
@@ -77,9 +84,9 @@ td > .y-textinput:hover, td > .r-textinput:hover{
 }
 td > .x-checkbox{
     text-align: center;
-    transform: scale(1.5);
+    transform: scale(1.75);
     cursor: pointer;
-    box-shadow: 1px 1px #66b3ff;
+    box-shadow: 1.5px 1.5px #66b3ff;
     background-color: hotpink;
 }
 td > .x-checkbox:hover{
@@ -101,19 +108,20 @@ td > .x-labels{
     font-family: serif;
     text-align: center;
     color: rgba(5, 205, 221, 0.95);
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px #ff80ff;
 }
 td#rightHeaderPart{
-    font-family: serif;
-    color: rgb(231, 194, 195);
-
-}
-#rightHeaderPart:hover{
     animation-name: spin, depth;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-duration: 2.5s;
     cursor: vertical-text;
+    font-family: serif;
+    color: rgb(231, 194, 195);
+
+}
+#rightHeaderPart:hover{
+    animation: none;
 }
 #resultTable {
     margin-top: 20px;
@@ -126,19 +134,19 @@ td#rightHeaderPart{
     font-size: 25px;
     text-align: center;
 }
-#resultTable tr:nth-child(2n-1) {
+#resultTable tr:nth-child(2n) {
     background-color: black;
     color: #66b3ff;
     text-shadow: 1px 1px #ff80ff;
 }
 
-#resultTable tr:nth-child(2n):hover {
+#resultTable tr:nth-child(2n-1):hover {
     background-color: lightpink;
     color: #2b1165;
     text-shadow: 1px 1px #66b3ff;
 }
 
-#resultTable tr:nth-child(2n-1):hover {
+#resultTable tr:nth-child(2n):hover {
     background-color: #ff80ff;
     color: #fa2a55;
 }
@@ -157,9 +165,9 @@ td#rightHeaderPart{
     text-align: center;
 }
 footer{
-    background-image: url("/vaporfloor.svg");
+    background-image: url("vaporfloor.svg");
     background-repeat: no-repeat;
-    width: 99%;
+    width: 100%;
 }
 footer #links{
     display: none;
@@ -180,7 +188,7 @@ footer:hover #links{
     border: 7px solid #2623ff;
     box-shadow: 5px 5px #0000b3;
 }
-#submit-button{
+.action-button{
     margin-top: 10px;
     height: 3rem;
     width: 10rem;
@@ -190,8 +198,11 @@ footer:hover #links{
     color: #fa2a55;
     cursor: pointer;
     box-shadow: 3px 3px #0000b3;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
-#submit-button:hover{
+.action-button:hover{
     background-color: #2623ff;
     box-shadow: none;
 }
@@ -201,9 +212,9 @@ footer:hover #links{
 }
 @keyframes depth {
     0% { text-shadow: 0 0 #fa2a55; }
-    25% { text-shadow: 2px 0 #fa2a55, 4px 0 #fa2a55, 6px 0 #fa2a55, 8px 0 #fa2a55, 10px 0 #fa2a55; }
+    25% { text-shadow: 2px 0 #41c9ff, 4px 0 #41c9ff, 6px 0 #41c9ff, 8px 0 #41c9ff, 10px 0 #41c9ff; }
     50% { text-shadow: 0 0 #fa2a55; }
-    75% {text-shadow: -2px 0 #fa2a55, -4px 0 #fa2a55, -6px 0 #fa2a55, -8px 0 #fa2a55, -10px 0 #fa2a55; }
+    75% {text-shadow: -2px 0 #41c9ff, -4px 0 #41c9ff, -6px 0 #41c9ff, -8px 0 #41c9ff, -10px 0 #41c9ff; }
     100% { text-shadow: 0 0 #fa2a55 }
 }
 .overlay {
@@ -223,7 +234,7 @@ footer:hover #links{
 
 .glitch:hover {
     clip-path: polygon(0 0, 100% 0, 100% .5em, 0 .5em);
-    animation: glitch 10s linear infinite;
+    animation: glitch 30s linear infinite;
     transform: translatex(.1rem);
 }
 
@@ -265,8 +276,8 @@ footer:hover #links{
 
      width: 100%;
      height: 50%;
-     background-color: var(--fg-color);
-     background: var(--fg-grad);
+     background-color: var(--bg-color);
+     background: var(--bg-grad);
      background-size: 18vh 18vh;
      background-position: bottom center;
      clip-path: polygon(
@@ -320,4 +331,58 @@ footer:hover #links{
                 0 20em, 100% 20em, 100% 20.5em, 0 20.5em
         );
     }
+}
+.w-logo-holder {
+    position: absolute;
+    right: 75%;
+    top: 60%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+.w-logo-holder-2 {
+    position: absolute;
+    left: 85%;
+    top: 60%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+.w-logo {
+    position: relative;
+    width: 200px;
+    margin: auto;
+    transform: rotatey(60deg);
+    transform-style: preserve-3d;
+}
+.w-logo > div {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    box-sizing: border-box;
+}
+.w-logo > .first-left {
+    transform: rotate3d(1, 0, 0, -15deg) translate3d(50px, -28px, 102px);
+    background-color: #2623ff;
+}
+.w-logo > .first-right {
+    transform: rotate3d(1, 0, 0, 15deg) translate3d(50px, 13px, 51px);
+    background-color: #ff80ff;
+}
+.w-logo > .second-left {
+    transform: rotate3d(1, 0, 0, -15deg) translate3d(50px, 0, 0);
+    background-color: #2623ff;
+}
+.w-logo > .second-right {
+    transform: rotate3d(1, 0, 0, 15deg) translate3d(50px, -13px, -51px);
+    background-color: #ff80ff;
+}
+.w-logo > .third-left {
+    transform: rotate3d(1, 0, 0, -15deg) translate3d(50px, 28px, -102px);
+    background-color: #2623ff;
+}
+@keyframes w-rotate {
+    0% {transform: rotatey(60deg)}
+    100% {transform: rotatey(420deg)}
+}
+.w-logo {
+    animation: w-rotate 10s linear infinite;
 }

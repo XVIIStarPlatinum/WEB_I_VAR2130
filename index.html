@@ -24,7 +24,27 @@
             </td>
         </tr>
         <tr id="taskImage">
-            <td colspan=100% ><img src="./Task.svg" alt="Task Grid" usemap="#task"></td>
+            <td colspan="95%"><img src="./Task.svg" alt="Task Grid" usemap="#task"></td>
+            <td>
+                <div class="w-logo-holder">
+                    <div class="w-logo">
+                        <div class="first-left"></div>
+                        <div class="first-right"></div>
+                        <div class="second-left"></div>
+                        <div class="second-right"></div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="w-logo-holder-2">
+                    <div class="w-logo">
+                        <div class="first-left"></div>
+                        <div class="first-right"></div>
+                        <div class="second-left"></div>
+                        <div class="second-right"></div>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
             <td class="text" colspan=100%>
@@ -99,32 +119,40 @@
 
         </table>
         <table class="y/r-input">
-            <tr id="inputY">
+            <tr id="inputYR">
                 <td><label class="ylabel" for="y-value"><h2>Y:</h2></label></td>
-                <td><input class="y-textinput" type="number" id="y-value" name="yval" autocomplete="off" maxlength="10"
-                           placeholder="Введите число в интервале [-3; 3]"></td>
+                <td><input class="y-textinput" type="text" id="y-value" name="yval" autocomplete="off" maxlength="10"
+                           placeholder="Y:[-3; 3]"></td>
                 <td><label class="rlabel" for="r-value"><h2>R:</h2></label></td>
-                <td><input class="r-textinput" type="number" id="r-value" name="rval" autocomplete="off" maxlength="10"
-                           placeholder="Введите число в интервале [2; 5]"></td>
-            </tr>
-            <tr>
-                <td colspan="100%">
-                    <button id="submit-button"><h1>Submit.</h1></button>
-                </td>
+                <td><input class="r-textinput" type="text" id="r-value" name="rval" autocomplete="off" maxlength="10"
+                           placeholder="R:[2; 5]"></td>
             </tr>
         </table>
+            <table class="buttons">
+                <tr>
+                    <td>
+                        <button type="submit" id="submit-button" class="action-button"><h1>Submit.</h1></button>
+                    </td>
+                    <td>
+                        <button type="reset" id="reset-button" class="action-button"><h1>Reset.</h1></button>
+                    </td>
+                </tr>
+            </table>
         </form>
     </div>
 
     <table id="resultTable">
-        <tr class="tableHeader">
-            <th><h2>X</h2></th>
-            <th><h2>Y</h2></th>
-            <th><h2>R</h2></th>
-            <th><h2>Локальное время</h2></th>
-            <th><h2>Время исполнения</h2></th>
-            <th><h2>Попадание</h2></th>
-        </tr>
+        <thead class="tableHeader">
+            <tr>
+                <th><h2>X</h2></th>
+                <th><h2>Y</h2></th>
+                <th><h2>R</h2></th>
+                <th><h2>Локальное время</h2></th>
+                <th><h2>Время исполнения</h2></th>
+                <th><h2>Попадание</h2></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
     </table>
     <footer>
         <table>
