@@ -27,7 +27,11 @@ function validateRad($rVal){
 }
 
 function validateForm($xVal, $yVal, $rVal){
-    return validateX($xVal) && validateY($yVal) && validateRad($rVal);
+    if (validateX($xVal) && validateY($yVal) && validateRad($rVal)){
+        return true;
+    } else {
+        header('HTTP/1.0 412 Precondition Failed');
+        return false;
 }
 function calcTriangle($xVal, $yVal, $rVal){
     return $xVal >= 0 && $yVal <= 0 && $xVal <= $rVal && $yVal >= -$rVal && ($rVal * $rVal)/2 >= abs($yVal) + abs($xVal);
