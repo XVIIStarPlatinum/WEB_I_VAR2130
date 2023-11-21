@@ -1,6 +1,8 @@
 # WEB_I_VAR2130
 First lab work of web-programming course, SE ITMO
 
+Used technologies: HTML/CSS, PHP, JavaScript, AJAX, CGI/FastCGI
+
 Лабораторная работа #1
 
 Вариант: 2130
